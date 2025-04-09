@@ -1,0 +1,301 @@
+[
+    {
+        "label": "Todo",
+        "importPath": "models.models",
+        "description": "models.models",
+        "isExtraImport": true,
+        "detail": "models.models",
+        "documentation": {}
+    },
+    {
+        "label": "TodoIn",
+        "importPath": "schemas.schemas",
+        "description": "schemas.schemas",
+        "isExtraImport": true,
+        "detail": "schemas.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "TodoIn",
+        "importPath": "schemas.schemas",
+        "description": "schemas.schemas",
+        "isExtraImport": true,
+        "detail": "schemas.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "TodoOut",
+        "importPath": "schemas.schemas",
+        "description": "schemas.schemas",
+        "isExtraImport": true,
+        "detail": "schemas.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "database",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "metadata",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "database",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "metadata",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "engine",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "Column",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Integer",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "String",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Boolean",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "create_engine",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "MetaData",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "declarative_base",
+        "importPath": "sqlalchemy.ext.declarative",
+        "description": "sqlalchemy.ext.declarative",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.declarative",
+        "documentation": {}
+    },
+    {
+        "label": "crud",
+        "importPath": "crud",
+        "description": "crud",
+        "isExtraImport": true,
+        "detail": "crud",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Database",
+        "importPath": "databases",
+        "description": "databases",
+        "isExtraImport": true,
+        "detail": "databases",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "models",
+        "description": "models",
+        "detail": "models",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "importPath": "routes.routes",
+        "description": "routes.routes",
+        "isExtraImport": true,
+        "detail": "routes.routes",
+        "documentation": {}
+    },
+    {
+        "label": "asynccontextmanager",
+        "importPath": "contextlib",
+        "description": "contextlib",
+        "isExtraImport": true,
+        "detail": "contextlib",
+        "documentation": {}
+    },
+    {
+        "label": "Todo",
+        "kind": 6,
+        "importPath": "models.models",
+        "description": "models.models",
+        "peekOfCode": "class Todo(Base):\n    __tablename__ = \"todos\"\n    id = Column(Integer, primary_key=True, index=True)\n    title = Column(String, index=True)\n    completed = Column(Boolean, default=False, nullable=False)",
+        "detail": "models.models",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "kind": 5,
+        "importPath": "models.models",
+        "description": "models.models",
+        "peekOfCode": "Base = declarative_base(metadata=metadata)\nclass Todo(Base):\n    __tablename__ = \"todos\"\n    id = Column(Integer, primary_key=True, index=True)\n    title = Column(String, index=True)\n    completed = Column(Boolean, default=False, nullable=False)",
+        "detail": "models.models",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "routes.routes",
+        "description": "routes.routes",
+        "peekOfCode": "router = APIRouter()\n@router.get(\"/todos\", response_model=list[TodoOut])\nasync def get_todos():\n    #call crud function to get all todos\n    return await crud.get_all_todos()\n@router.post(\"/enter_todo\", response_model=TodoOut)\nasync def add_todo(todo: TodoIn):\n    #call crud function to get all todos\n    return await crud.create_todo(todo)",
+        "detail": "routes.routes",
+        "documentation": {}
+    },
+    {
+        "label": "TodoIn",
+        "kind": 6,
+        "importPath": "schemas.schemas",
+        "description": "schemas.schemas",
+        "peekOfCode": "class TodoIn(BaseModel):\n    title: str\nclass TodoOut(BaseModel):\n    id: int\n    title: str\n    completed: bool",
+        "detail": "schemas.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "TodoOut",
+        "kind": 6,
+        "importPath": "schemas.schemas",
+        "description": "schemas.schemas",
+        "peekOfCode": "class TodoOut(BaseModel):\n    id: int\n    title: str\n    completed: bool",
+        "detail": "schemas.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASE_URL",
+        "kind": 5,
+        "importPath": "database",
+        "description": "database",
+        "peekOfCode": "DATABASE_URL = \"postgresql://todo_user:password@localhost/todo_db\"\ndatabase = Database(DATABASE_URL)\nmetadata = MetaData()\nengine = create_engine(DATABASE_URL)",
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "database",
+        "kind": 5,
+        "importPath": "database",
+        "description": "database",
+        "peekOfCode": "database = Database(DATABASE_URL)\nmetadata = MetaData()\nengine = create_engine(DATABASE_URL)",
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "metadata",
+        "kind": 5,
+        "importPath": "database",
+        "description": "database",
+        "peekOfCode": "metadata = MetaData()\nengine = create_engine(DATABASE_URL)",
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "engine",
+        "kind": 5,
+        "importPath": "database",
+        "description": "database",
+        "peekOfCode": "engine = create_engine(DATABASE_URL)",
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "app = FastAPI(lifespan=lifespan)\napp.include_router(router)",
+        "detail": "main",
+        "documentation": {}
+    }
+]
