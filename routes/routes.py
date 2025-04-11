@@ -15,3 +15,5 @@ async def get_todos():
 async def add_todo(todo: TodoIn):
     #call crud function to get all todos
     return await crud.create_todo(todo)
+
+# @router.delete("/remove", response_model=TodoOut)

@@ -168,11 +168,35 @@
         "documentation": {}
     },
     {
-        "label": "Optional",
-        "importPath": "typing",
-        "description": "typing",
+        "label": "TestClient",
+        "importPath": "fastapi.testclient",
+        "description": "fastapi.testclient",
         "isExtraImport": true,
-        "detail": "typing",
+        "detail": "fastapi.testclient",
+        "documentation": {}
+    },
+    {
+        "label": "TestClient",
+        "importPath": "fastapi.testclient",
+        "description": "fastapi.testclient",
+        "isExtraImport": true,
+        "detail": "fastapi.testclient",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "importPath": "main",
+        "description": "main",
+        "isExtraImport": true,
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "importPath": "main",
+        "description": "main",
+        "isExtraImport": true,
+        "detail": "main",
         "documentation": {}
     },
     {
@@ -231,8 +255,35 @@
         "kind": 5,
         "importPath": "routes.routes",
         "description": "routes.routes",
-        "peekOfCode": "router = APIRouter()\n@router.get(\"/todos\", response_model=list[TodoOut])\nasync def get_todos():\n    #call crud function to get all todos\n    return await crud.get_all_todos()\n@router.post(\"/enter_todo\", response_model=TodoOut)\nasync def add_todo(todo: TodoIn):\n    #call crud function to get all todos\n    return await crud.create_todo(todo)",
+        "peekOfCode": "router = APIRouter()\n@router.get(\"/todos\", response_model=list[TodoOut])\nasync def get_todos():\n    #call crud function to get all todos\n    return await crud.get_all_todos()\n@router.post(\"/enter_todo\", response_model=TodoOut)\nasync def add_todo(todo: TodoIn):\n    #call crud function to get all todos\n    return await crud.create_todo(todo)\n# @router.delete(\"/remove\", response_model=TodoOut)",
         "detail": "routes.routes",
+        "documentation": {}
+    },
+    {
+        "label": "test_get_todos",
+        "kind": 2,
+        "importPath": "routes.test_routes",
+        "description": "routes.test_routes",
+        "peekOfCode": "def test_get_todos():\n    with TestClient(app) as client:\n        response = client.get(\"/todos\")\n        assert response.status_code == 200\ndef test_enter_todos():\n    with TestClient(app) as client:\n        response = client.post(\"/enter_todo\", json=data)\n        assert response.status_code == 201 or response.status_code == 200",
+        "detail": "routes.test_routes",
+        "documentation": {}
+    },
+    {
+        "label": "test_enter_todos",
+        "kind": 2,
+        "importPath": "routes.test_routes",
+        "description": "routes.test_routes",
+        "peekOfCode": "def test_enter_todos():\n    with TestClient(app) as client:\n        response = client.post(\"/enter_todo\", json=data)\n        assert response.status_code == 201 or response.status_code == 200",
+        "detail": "routes.test_routes",
+        "documentation": {}
+    },
+    {
+        "label": "data",
+        "kind": 5,
+        "importPath": "routes.test_routes",
+        "description": "routes.test_routes",
+        "peekOfCode": "data = {\"id\" : 1,\n        \"title\": \"do stuff\",\n        \"completed\": False}\ndef test_get_todos():\n    with TestClient(app) as client:\n        response = client.get(\"/todos\")\n        assert response.status_code == 200\ndef test_enter_todos():\n    with TestClient(app) as client:\n        response = client.post(\"/enter_todo\", json=data)",
+        "detail": "routes.test_routes",
         "documentation": {}
     },
     {
@@ -296,6 +347,15 @@
         "description": "main",
         "peekOfCode": "app = FastAPI(lifespan=lifespan)\napp.include_router(router)",
         "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "test_read",
+        "kind": 2,
+        "importPath": "test_main",
+        "description": "test_main",
+        "peekOfCode": "def test_read():\n    with TestClient(app) as client:\n        response = client.get(\"/todos\")\n        assert response.status_code == 200",
+        "detail": "test_main",
         "documentation": {}
     }
 ]

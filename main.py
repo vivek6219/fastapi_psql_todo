@@ -11,6 +11,7 @@ async def lifespan(app: FastAPI):
     #startup 
     print("App is starting up")
     await database.connect()
+    
     #yield control to fastapi to handle requests
     yield
     

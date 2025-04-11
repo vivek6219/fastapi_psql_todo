@@ -8,6 +8,7 @@ async def get_all_todos():
 
 async def create_todo(todo :TodoIn):
     print("I have entered crud")
+    
     query = Todo.__table__.insert().values(
         title=todo.title,
         completed=False
